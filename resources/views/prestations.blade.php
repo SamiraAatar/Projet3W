@@ -57,7 +57,7 @@
               
               <p>
                 Découvrez nos massages et laissez-vous emporter pour un moment de détente inoubliable. <br>
-                <a href="./Massage.html">
+                <a href="{{route('servicedetail')}}">
                   <button class="TexteCardButton">
                     Voir Plus
                   </button>

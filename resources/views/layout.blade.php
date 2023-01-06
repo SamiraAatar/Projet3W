@@ -58,11 +58,11 @@
 
              <nav>
                  <ul class="MenuNav">
-                     <li><a href= "index.html">Accueil</a></li>
-                     <li><a href= "histoire.html">Histoire</a></li>
-                     <li><a href= "Prestations.html">Prestation</a></li>
-                     <li><a href= "Reservation.html">Réservation</a></li>
-                     <li><a href="#formulaireDeContact">Contact</a></li>
+                     <li><a href= "{{route('home')}}">Accueil</a></li>
+                     <li><a href= "{{route('histoire')}}">Histoire</a></li>
+                     <li><a href= "{{route('prestations')}}">Prestation</a></li>
+                     <li><a href= "{{route('reservation')}}">Réservation</a></li>
+                     <li><a href="{{route('contact')}}">Contact</a></li>
                      <li>
                          <a href= "pages/index.html" class="inscription">
                              <i class="fa-solid fa-user"></i>

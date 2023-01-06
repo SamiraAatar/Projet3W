@@ -187,7 +187,7 @@
 
 
         <div class="SectionTroisBlockbtn">
-            <a href="Prestations.html">
+            <a href="{{route('prestations')}}">
                 <button class="SectionTroisBtn"> Voir Plus</button>
             </a>
         </div>
