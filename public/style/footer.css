@@ -1,0 +1,39 @@
+/* -------------------------------Footer --------------------------------------------------- */
+
+
+footer {
+
+    display: flex;
+    width: 100%;
+      /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px double #EDB5C2;
+    border-right: 1px double #EDB5C2;
+    border-left: 1px double #EDB5C2;
+    color: white;
+
+}
+.copy {
+  color: #EDB5C2;
+}
+.fa-brands, .fab {
+ 
+  color: #EDB5C2 !important;
+}
+.logoRéseau a {
+  text-decoration: none;
+  /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+  cursor: pointer;
+}
+@media screen and (max-width:769px) {
+  footer {
+    flex-direction: column;
+}
+.copyright,.logoFooter,.logoRéseau{
+  margin-bottom: 2%;
+}
+}
+/* --------------------------------------------------------------------------------- */

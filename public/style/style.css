@@ -1,0 +1,1933 @@
+/*  ------ Import font family ------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Nunito+Sans:ital,wght@1,300&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:ital,wght@1,300&family=Smooch&display=swap');
+
+/* ------- Mes import css --------- */
+@import url("./footer.css");
+@import url("./NavbarHeader.css");
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————— */
+
+/* selector y sert a selectionner tout mes éléments (toute mes balises); redefinir les valeurs par défaut sui sont de 8px  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ***************************************** PAGE INDEX ************************************* */
+
+body {
+    background-color: black;
+}
+
+#SectionUneIndex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20%;
+  flex-wrap: wrap;
+  padding: 8% 2%;
+}
+
+#SectionTroisIndex h1 {
+    font-size: 50px;
+    text-align: center; 
+    color: white;
+}
+
+#SectionTroisIndex {
+    padding-top: 5%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+}
+
+.SectionUneDivImageIndex img {
+  box-shadow: #7c7c7c 0px 0px 9px;
+  border-radius: 19px 19px 19px 19px;
+  transition: all 1s ease;
+}
+
+.SectionUneDivImageIndex img:hover {
+    transform: scale(1.1);
+}
+
+.SectionUneDivTexteIndex h2 {
+    font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  color: #EDB5C2;
+  margin-bottom: 17px;
+  /* webkit text stoke  permet de définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte.  */
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #B53B7D;
+}
+
+.SectionUneDivTexteIndex p {
+    color: white; 
+}
+
+#SectionTroisIndex {
+    background-image: url("../image/paraindex.jpg") ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+}
+
+.SectionTroisIndexTitre {
+    text-align: center; 
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+    /* webkit text stoke  permet de définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte.  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+}
+
+.inscription {
+  border: 1px solid purple;
+    background-color: black;
+    padding: 15px 15px;
+    border-radius: 10px 20px;
+}
+
+#Etape {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 100px 0;
+ 
+}
+
+.contenair-Etape {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.number h1 {
+  font-size: 7vw;
+  color: #EDB5C2 ;
+  /* webkit text stoke  permet de définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte.  */
+ -webkit-text-stroke: 3px;
+ -webkit-text-stroke-color: #B53B7D; 
+
+}
+.textEtape h2{
+  font-size: 2vw;
+  color: burlywood;
+}
+.textEtape p {
+  font-size: 0.75vw;
+}
+.Etape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.number{
+  color: #fff;
+  padding: 1vw;
+}
+
+
+#SectionQuatreIndex {
+    height: 100%;
+    text-align: center;
+}
+.SectionQuatreIndexTitre {
+    text-align: center;
+    padding: 3%;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;  
+    color: #EDB5C2 ;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;   
+}
+
+.SectionQuatreIndex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */
+    transform-style: preserve-3d ;
+}
+
+.card {
+    /* position relative = L'élément est positionné dans le flux normal du document puis décalé, 
+    par rapport à lui-même, selon les valeurs fournies */
+    position: relative;
+    width: 348.5px;
+    height: 348.5px;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */
+    transform-style: preserve-3d;
+    /* La propriété perspective détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur 
+    afin de donner une perspective aux objets positionnés dans l'espace 3D. */
+    perspective: 1000px;
+    margin-bottom: 4.5%;
+}
+
+.card .ContenairCard {
+    /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page.
+     La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */
+    transform-style: preserve-3d;
+    /* transition = Elle permet de définir la transition entre deux états d'un élément. */
+    transition: 1s ease;
+}
+.card .ContenairCard .ImgCard img {
+    /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. 
+    La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* La propriété CSS object-fit définit la façon dont le contenu d'un élément remplacé (<img> ou <video> par exemple)
+     doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur. 
+     cover = Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant
+      toute la boîte de contenu.*/
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 12px 12px 32px -9px black;;
+    
+}
+.card .ContenairCard .TexteCard {
+    /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* La propriété backface-visibility indique si la face arrière d'un élément doit être visible lorsqu'elle est orientée
+     vers l'utilisateur.
+     hidden = Ce mot-clé indique que la face arrière n'est pas visible. La face avant est donc cachée. */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d;
+    /* transfom rotate définit une transformation qui deplace l'élément autour d'un point fixe, 
+    la rotation est définit par un angle 
+    La fonction rotateY() définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer.*/
+    transform: rotateY(180deg);
+}
+
+.card .ContenairCard .TexteCard div {
+     /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d;
+  padding: 20px;
+  /* La fonction translateZ() permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. */
+  transform: translateZ(100px);
+  border-radius: 10px;
+  background: #00000033;
+}
+
+.card:hover .ContenairCard{
+    /* La fonction rotateY() définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer. */
+    transform: rotateY(180deg); 
+}
+
+.card .ContenairCard  .TexteCard div h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #fd3ca3;
+  
+  }
+.TexteCard div {
+    text-align: center;
+    /* line height = l'espace entre les lignes */
+    line-height: 1.5;
+}
+
+
+  @media screen and (max-width: 769px) {
+    .card {
+      margin-bottom: 9%;
+    }
+  }
+
+  .TexteCard a {
+    text-decoration: none;
+}
+.SectionTroisBtn {
+    background: transparent; 
+    border: 1px double #fd3ca3;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px 0;
+    transition: all 0.4s ease;
+    /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+    cursor: pointer;
+    /* outline none = retirer les contours */
+    outline: none;
+  }
+  
+  .SectionTroisBtn:hover {
+    background: white; 
+    border: 1px double #fd3ca3;
+    color: black;
+  }
+
+
+
+
+/* _______________Newsletter__________________________-- */
+
+
+
+.containerN{
+  
+    padding: 100px 40px;
+    text-align: center;
+    color: #B53B7D;
+    
+    
+  }
+  .containerN p {
+      /* La propriété max-width est utilisée pour définir la largeur maximale d'un élément donné. */
+    max-width: 600px;
+    margin: 40px auto;
+    font-size: 15px;
+    font-weight: 300;
+    color: whitesmoke;
+  }
+  .email-box{
+    height: 40px;
+    justify-content: center;
+    display: flex; 
+  }
+  .email-box i{
+    background: #2f3542;
+    width: 40px;
+    /* line height = l'espace entre les lignes */
+    line-height: 40px;
+  }
+  .tbox,.btn{
+    border: none;
+    /* outline none = retirer les contours */
+    outline: none;
+  }
+  .tbox{
+    width: 0px;
+    transition: 0.6s;
+  }
+  .email-box:hover > .tbox,.tbox:focus{
+    width: 260px;
+    padding: 0 10px;
+  }
+  .btn{
+    background: #2f3542;
+    color: white;
+    padding: 0 10px;
+    /* text-transform uppercase = Cela permet que le texte soit écrit uniquement en majuscules */
+    text-transform: uppercase;
+     /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+    cursor: pointer;
+  }
+
+  /* ---------------- Fin Newsletter ----------------------- */
+
+
+/* ----------- contact formulaire ----------------------- */
+
+.containerContact, .containerContactContact{
+     /* position relative = L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, 
+     selon les valeurs fournies */
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 35px 0;
+}
+
+/* En CSS, ::after crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé 
+pour ajouter du contenu cosmétique à un élément, 
+en utilisant la propriété CSS content.  */
+.containerContact:after{
+	content: '';
+     /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page.
+      La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("../image/imgContact.jpg") no-repeat center;
+	background-size: cover;
+    /* filter blur permet d'appliquer un flou sur l'image */
+	filter: blur(50px);
+    /* z-index sert à contrôler le positionnement des éléments sur l'axe Z. */
+	z-index: -1;
+}
+.contact-box{
+    /* La propriété max-width est utilisée pour définir la largeur maximale d'un élément donné. */
+	max-width: 850px;
+    /* grid = L'élément se comporte comme un élément de bloc et dispose son contenu selon le modèle des grilles. */
+	display: grid;
+    /* La propriété grid-template-columns définit les noms des lignes et les fonctions de taille pour les colonnes de la grille.
+    La fonction CSS repeat() permet de répéter un fragment d'une liste de pistes. */
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("../image/imgContact.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+.containerContact  h2{
+    /* position relative = L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même,
+     selon les valeurs fournies */
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+
+/* En CSS, ::after crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné. 
+Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, 
+en utilisant la propriété CSS content.  */
+ .containerContact h2:after{
+	content: '';
+    /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. 
+    La positions finale de l'élément est déterminée par les valaur qu'on lui donne  */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    /* La fonction CSS translateX() permet d'appliquer une translation en 2D. */
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #EDB5C2;
+} 
+
+/* note unité de mesure  rem  
+le « rem » permet de définir une valeur constante tout le long du document égale à la taille de la police de l'élément racine.
+Cette unité peut être alors utilisée pour créer des éléments et propriétés CSS responsives puisque
+ qu'elle s'adaptera à la taille de la police du support d'affichage.*/
+
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btncontact{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #EDB5C2;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+    /* outline none = retirer les contours */
+	outline: none;
+     /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btncontact:hover{
+    background-color: #EDB5C2;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+        /* La propriété grid-template-columns définit les noms des lignes et les fonctions de taille 
+        pour les colonnes de la grille. */
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+
+
+  /* -----------------------OFFRE DE LANCEMENT -------------------------------------- */
+
+  .about-section {
+    height: 100%;
+    width: 100%;
+    padding: 75px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+  
+  .SectionAproposDeMoi {
+    background: url(../image/imageoffredelancement.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: black;
+    /* La propriété CSS overflow est une propriété raccourcie qui définit comment gérer le dépassement du contenu d'un élément
+     dans son bloc
+    hidden = Le contenu est rogné si besoin pour s'inscrire dans la boîte de remplissage (padding) et
+     aucune barre de défilement n'est affichée. */
+    overflow: hidden;
+    padding: 100px 0;
+  }
+  
+  .inner-container {
+    width: 44%;
+    /* La propriété float right = indique que l'élément doit être retiré du flux normal et doit être placé
+     sur le côté droit de son conteneur */
+    float: right;
+    background-color: #fdfdfd;
+    padding: 59px;
+}
+    .inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #EDB5C2;
+  }
+  
+  .text{
+    color: #545454;
+     /* line height = l'espace entre les lignes */
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-weight: bolder;
+  }
+  
+  
+  .skills{
+    display: flex;
+     /* space-between = Les éléments sont répartis équitablement.
+     Le bord du premier est aligné sur le début du conteneur et la fin du dernier est alignée sur la fin du conteneur */ 
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+    color: pink;
+  }
+
+  .btnOffre {
+    width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #EDB5C2;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+    /* outline none = retirer les contours */
+	outline: none;
+    /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+	cursor: pointer;
+	transition: .3s;
+
+  }
+  
+
+
+  @media screen and (max-width:1000px){
+    .SectionAproposDeMoi{
+        padding: 0;
+        background-size: cover;
+        text-align: center;
+  
+    }
+    .inner-container {
+      width: 90%;
+      text-align: center; 
+      background: #ffffff80;
+  
+  }
+  .text {
+    text-align: center;
+  }
+ 
+  }
+  
+  @media screen and (max-width:630px){
+    .SectionAproposDeMoi{
+        padding: 0;
+        background-size: cover;
+  
+    }
+    .inner-container {
+        width: 80%;
+      text-align: center; 
+      background: #ffffff80;
+  
+  }
+  .skills {
+      /* space-evenly =  Les éléments sont répartis équitablement  
+      Tous les éléments sont séparés par le même espace */ 
+    justify-content: space-evenly;
+    font-weight: 700;
+    color: pink;
+}
+  }
+
+
+
+/* ––––––––––––––——————————————————————————————–––––————––––––––—-- */
+
+/* Scetion 5 */
+
+#SectionSixIndex {
+    width: 100%;
+    height: 100%;
+  
+    
+    
+}
+#SectionSixIndex h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2; 
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+-webkit-text-stroke-color: #B53B7D;
+}
+.contenairAvis {
+    /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.contenairAvis {
+  padding: 6% 0;
+}
+.Avis {
+  margin-bottom: 5%;
+}
+
+.Avis p {
+    color: white;
+}
+.contenairAvis .Avis {
+    border:5px solid #B53B7D;
+    /* pour encadrer les avis */
+   
+}
+
+
+/* ————————————————————————————- FIN PAGE INDEX –––––––––––––––––––––––––––––––––––––––––––––––––— */
+
+
+/* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+/* –––––––––––––––––––––––––––––––––––––– PAGE HISTOIRE –––––––––––––––––––––––––––––––––––––––––——– */
+
+
+#SectionSloganHistoire p {
+    text-align: center;  
+    color: white;
+  
+  }
+  
+  #SectionSloganHistoire {
+      padding-bottom: 5%;
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+     
+  }
+  
+  
+  #SectionUneHistoire {
+    display: flex;
+    /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20%;
+    flex-wrap: wrap;
+    padding: 8% 2%;
+  }
+  
+  .SectionUneDivImageHistoire img {
+    box-shadow: #7c7c7c 0px 0px 9px;
+    border-radius: 19px 19px 19px 19px;
+    transition: all 1s ease;
+   
+  
+  }
+  
+  .SectionUneDivImageHistoire img:hover {
+      transform: scale(1.1);
+  }
+  
+  .SectionUneDivTexteHistoire h2 {
+      font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2;
+    margin-bottom: 17px;
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;
+  }
+  
+  .SectionUneDivTexteHistoire p {
+      color: white;
+      
+  }
+
+
+  /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+/* ––––––––––––––––––––––––––––––––– PAGE PRESTATION –––––––––––––––––––––––––––––– */
+
+
+SectionDeuxPrestation {
+    height: 100%;
+    text-align: center;
+  }
+  
+  .SectionDeuxPrestationTitre {
+    text-align: center;
+    padding: 1%;
+    font-size: 40px;  
+    font-family: 'Dancing Script', cursive;  
+    color: #EDB5C2 ;
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D; 
+    
+  }
+  .SectionDeuxPrestationPara {
+    text-align: center;  
+    color: white ;
+    padding: 30px 0 60px 0;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+  }  
+  
+  
+  
+  
+  .SectionDeuxPrestation-container {
+    display: flex;
+      /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d ;
+  }
+  
+  
+  .card {
+      /* position relative = L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies */
+    position: relative;
+    width: 255px;
+    height: 255px;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d;
+    /* La propriété perspective détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. */
+    perspective: 1000px;
+    margin-bottom: 4.5%;
+  }
+  
+  .card .ContenairCard {
+      /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d;
+    transition: 1s ease;
+  }
+  
+  
+  
+  .card .ContenairCard .ImgCard img {
+      /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* La propriété CSS object-fit définit la façon dont le contenu d'un élément remplacé (<img> ou <video> par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur. 
+     cover = Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu.*/
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 12px 12px 32px -9px black;;
+    
+  }
+  
+  
+  .card .ContenairCard .TexteCard {
+      /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. La positions finale de l'élément est déterminée 
+    par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* La propriété backface-visibility indique si la face arrière d'un élément doit être visible lorsqu'elle est orientée vers l'utilisateur.
+     hidden = Ce mot-clé indique que la face arrière n'est pas visible. La face avant est donc cachée. */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d;
+    /* transfom rotate définit une transformation qui deplace l'élément autour d'un point fixe, la rotation est définit par un angle 
+    La fonction rotateY() définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer.*/
+    transform: rotateY(180deg);
+  }
+  
+  .card .ContenairCard .TexteCard div {
+      /* preserve-3d = Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */ 
+    transform-style: preserve-3d;
+    padding: 20px;
+    /* La fonction translateZ() permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. */
+    transform: translateZ(100px);
+    border-radius: 10px;
+    background: #00000033;
+  }
+  
+  .card:hover .ContenairCard{
+      /* La fonction rotateY() définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer. */
+    transform: rotateY(180deg); 
+  }
+  
+  .card .ContenairCard  .TexteCard div h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #fd3ca3;
+  
+  }
+  .TexteCard div {
+    text-align: center;
+    /* line height = l'espace entre les lignes */
+    line-height: 1.5;
+  }
+  
+  .TexteCardButton {
+    background: transparent; 
+    border: 1px double #fd3ca3;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px 0;
+    transition: all 0.4s ease;
+    /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+    cursor: pointer;
+    /* outline none = retirer les contours */
+    outline: none;
+  }
+  
+  .TexteCardButton:hover {
+    background: white; 
+    border: 1px double #fd3ca3;
+    color: black;
+  }
+  
+  
+  @media screen and (max-width: 769px) {
+    .card {
+      margin-bottom: 9%;
+    }
+  }
+
+
+   /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+/* –––––––––––––––––––––––––––––––––PAGE SOIN VISAGE ——————————————————————————————————————————————————————————————————————— */
+
+   
+  /* ------------------------------- SECTION UNE ---------------------------------- */
+  
+  
+  
+  #SectionUneSoinVisage h1 {
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+      
+  }
+  #SectionUneSoinVisage p {
+    text-align: center;  
+    color: white;
+  
+  }
+  
+  #SectionUneSoinVisage {
+      padding-top: 2%; 
+      font-family: 'Great Vibes', cursive;
+      font-size: 30px;
+     
+  }
+  
+  /* ------------------------------- SECTION UNE FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION DEUX ---------------------------------- */
+  
+  
+  
+  .contenairFormule {
+    display: flex;
+    /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20%;
+    flex-wrap: wrap;
+    padding: 8% 2%;
+  }
+  
+  .ImageFormule img{
+    box-shadow: #7c7c7c 0px 0px 9px;
+    border-radius: 19px 0 19px 0;
+    transition: all 1s ease;
+  }
+  
+  .ImageFormule img:hover{
+    transform: scale(1.1);
+  }
+  
+  .FormuleTitre {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2;
+    margin-bottom: 17px;
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;
+    
+  }
+  
+  .FormuleDescri, .FormuleDuree, .FormulePrix{
+    color: white;
+  }
+  .FormuleDuree span , .FormulePrix span {
+    color: #B53B7D;
+  }
+  
+  .FormuleBtn {
+    background-color: grey;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 10px 16px;
+    text-align: center;
+    /* text-transform uppercase = Cela permet que le texte soit écrit uniquement en majuscules */
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .FormulePrix {
+    margin-bottom: 25.6px;
+  }
+  .FormuleBtn:hover{
+    background-color: silver;
+    color: grey;
+  }
+  .space{
+    margin-left: 31px;
+      margin-right: 31px;
+  }
+  /* ------------------------------- SECTION DEUX FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION TROIS  ------------------------------------ */
+  
+  
+  #SectionTroisSoinVisage {
+    background-image: url("../image/para1soinVisage.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionTroisSoinVisageTitre {
+    text-align: center;
+    padding-top: 5%;  
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: whitesmoke;
+   
+  
+   }
+  
+  
+   #SectionCinqSoinVisage {
+    background-image: url("../image/Para2soinVisage.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionCinqSoinVisageTitre {
+    text-align: center;
+    padding-top: 10%;  
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: whitesmoke ;
+   
+  
+   }
+  
+   @media only screen and (max-width: 1024px) {
+    .contenairFormule {
+        /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+      justify-content: space-around;
+      /* La propriété flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : 
+      elle définit l'axe principal et la direction des éléments (normale ou inversée). */
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ImageFormule {
+      margin-bottom: 8%;
+    }
+    .contenairFormuleResponsive {
+     flex-direction: column-reverse;
+    }
+    
+  }
+  
+  /* ————————————————————————————————————-FIN PAGE SOIN DU VISAGE ————————————————————————————————————————————————————————— */
+
+
+   /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+/* –––––––––––––––––––––––––––––––––PAGE MASSAGE ——————————————————————————————————————————————————————————————————————— */
+
+  
+   
+  /* ------------------------------- SECTION UNE ---------------------------------- */
+  
+  
+  
+  #SectionUneMassage h1 {
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+    /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+      
+  }
+  #SectionUneMassage p {
+    text-align: center;  
+    color: white;
+  
+  }
+  
+  #SectionUneMassage {
+      padding-top: 2%; 
+      font-family: 'Great Vibes', cursive;
+      font-size: 30px;
+     
+  }
+  
+  /* ------------------------------- SECTION UNE FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION DEUX ---------------------------------- */
+  
+  
+  
+  .contenairFormule {
+    display: flex;
+     /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20%;
+    flex-wrap: wrap;
+    padding: 8% 2%;
+  }
+  
+  .ImageFormule img{
+    box-shadow: #7c7c7c 0px 0px 9px;
+    border-radius: 19px 0 19px 0;
+    transition: all 1s ease;
+  }
+  
+  .ImageFormule img:hover{
+    transform: scale(1.1);
+  }
+  
+  .FormuleTitre {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2;
+    margin-bottom: 17px;
+     /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;
+    
+  }
+  
+  .FormuleDescri, .FormuleDuree, .FormulePrix{
+    color: white;
+  }
+  .FormuleDuree span , .FormulePrix span {
+    color: #B53B7D;
+  }
+  
+  .FormuleBtn {
+    background-color: grey;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 10px 16px;
+    text-align: center;
+    /* text-transform uppercase = Cela permet que le texte soit écrit uniquement en majuscules */
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .FormulePrix {
+    margin-bottom: 25.6px;
+  }
+  .FormuleBtn:hover{
+    background-color: silver;
+    color: grey;
+  }
+  .space{
+    margin-left: 31px;
+      margin-right: 31px;
+  }
+  /* ------------------------------- SECTION DEUX FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION TROIS  ------------------------------------ */
+  
+  
+  #SectionTroisMassage {
+    background-image: url("../image/para.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionTroisMassageTitre {
+    text-align: center;
+    padding-top: 10%;  
+    font-size: 30px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+  
+   }
+  
+   @media only screen and (max-width: 1024px) {
+    .contenairFormule {
+        /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ImageFormule {
+      margin-bottom: 8%;
+    }
+    .contenairFormuleResponsive {
+     flex-direction: column-reverse;
+    }
+    
+  }
+  
+  /* ————————————————————————————————————-FIN PAGE MASSAGE ————————————————————————————————————————————————————————— */
+
+
+
+   /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+/* ––––––––––––––––––––––––––––––––––––––PAGE EPILATION –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+#SectionUneEpilation h1 {
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+      
+  }
+  #SectionUneEpilation p {
+    text-align: center;  
+    color: white;
+  
+  }
+  
+  #SectionUneEpilation {
+      padding-top: 2%; 
+      font-family: 'Great Vibes', cursive;
+      font-size: 30px;
+     
+  }
+
+
+  #SectionParaEpilation {
+    background-image: url("../image/ParaEpilation.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionParaEpilationTitre {
+    text-align: center;
+    padding-top: 10%;  
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+  
+   }
+
+
+
+
+
+
+
+
+
+
+
+  /* –––––––––––––––––––––––––––––––––––––– FIN PAGE EPILATION –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+
+    /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+/* –––––––––––––––––––––––––––––––––PAGE MANUCURE ——————————————————————————————————————————————————————————————————————— */
+
+  
+   
+  /* ------------------------------- SECTION UNE ---------------------------------- */
+  
+  
+  
+  #SectionUneManucure h1 {
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+      
+  }
+  #SectionUneManucure p {
+    text-align: center;  
+    color: white;
+  
+  }
+  
+  #SectionUneManucure {
+      padding-top: 2%; 
+      font-family: 'Great Vibes', cursive;
+      font-size: 30px;
+     
+  }
+  
+  /* ------------------------------- SECTION UNE FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION DEUX ---------------------------------- */
+  
+  
+  
+  .contenairFormule {
+    display: flex;
+     /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20%;
+    flex-wrap: wrap;
+    padding: 8% 2%;
+  }
+  
+  .ImageFormule img{
+    box-shadow: #7c7c7c 0px 0px 9px;
+    border-radius: 19px 0 19px 0;
+    transition: all 1s ease;
+  }
+  
+  .ImageFormule img:hover{
+    transform: scale(1.1);
+  }
+  
+  .FormuleTitre {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2;
+    margin-bottom: 17px;
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;
+    
+  }
+  
+  .FormuleDescri, .FormuleDuree, .FormulePrix{
+    color: white;
+  }
+  .FormuleDuree span , .FormulePrix span {
+    color: #B53B7D;
+  }
+  
+  .FormuleBtn {
+    background-color: grey;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 10px 16px;
+    text-align: center;
+    /* text-transform uppercase = Cela permet que le texte soit écrit uniquement en majuscules */
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .FormulePrix {
+    margin-bottom: 25.6px;
+  }
+  .FormuleBtn:hover{
+    background-color: silver;
+    color: grey;
+  }
+  .space{
+    margin-left: 31px;
+      margin-right: 31px;
+  }
+  /* ------------------------------- SECTION DEUX FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION TROIS  ------------------------------------ */
+  
+  
+  #SectionTroisManucure {
+    background-image: url("../image/paraManucure.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionTroisManucureTitre {
+    text-align: center;
+    padding-top: 10%;  
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+  
+   }
+  
+   @media only screen and (max-width: 1024px) {
+    .contenairFormule {
+        /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ImageFormule {
+      margin-bottom: 8%;
+    }
+    .contenairFormuleResponsive {
+     flex-direction: column-reverse;
+    }
+    
+  }
+  
+  /* ————————————————————————————————————-FIN PAGE MANUCURE ————————————————————————————————————————————————————————— */
+
+
+
+   /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+/* –––––––––––––––––––––––––––––––––PAGE MAKE'UP ——————————————————————————————————————————————————————————————————————— */
+
+  
+   
+  /* ------------------------------- SECTION UNE ---------------------------------- */
+  
+  
+  
+  #SectionUneMakeup h1 {
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+      
+  }
+  #SectionUneMakeup p {
+    text-align: center;  
+    color: white;
+  
+  }
+  
+  #SectionUneMakeup {
+      padding-top: 2%; 
+      font-family: 'Great Vibes', cursive;
+      font-size: 30px;
+     
+  }
+  
+  /* ------------------------------- SECTION UNE FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION DEUX ---------------------------------- */
+  
+  
+  
+  .contenairFormule {
+    display: flex;
+     /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20%;
+    flex-wrap: wrap;
+    padding: 8% 2%;
+  }
+  
+  .ImageFormule img{
+    box-shadow: #7c7c7c 0px 0px 9px;
+    border-radius: 19px 0 19px 0;
+    transition: all 1s ease;
+  }
+  
+  .ImageFormule img:hover{
+    transform: scale(1.1);
+  }
+  
+  .FormuleTitre {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2;
+    margin-bottom: 17px;
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;
+    
+  }
+  
+  .FormuleDescri, .FormuleDuree, .FormulePrix{
+    color: white;
+  }
+  .FormuleDuree span , .FormulePrix span {
+    color: #B53B7D;
+  }
+  
+  .FormuleBtn {
+    background-color: grey;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 10px 16px;
+    text-align: center;
+     /* text-transform uppercase = Cela permet que le texte soit écrit uniquement en majuscules */
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .FormulePrix {
+    margin-bottom: 25.6px;
+  }
+  .FormuleBtn:hover{
+    background-color: silver;
+    color: grey;
+  }
+  .space{
+    margin-left: 31px;
+      margin-right: 31px;
+  }
+  /* ------------------------------- SECTION DEUX FIN ------------------------------------ */
+  
+  /* ------------------------------- SECTION TROIS  ------------------------------------ */
+  
+  
+  #SectionTroisMakeup {
+    background-image: url("../image/ParaMakeup.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionTroisMakeupTitre {
+    text-align: center;
+    padding-top: 5%;  
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: whitesmoke;
+   
+  
+   }
+  
+  
+   #SectionCinqMakeup {
+    background-image: url("../image/Para2makeup.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  
+  }
+  
+  
+  .SectionCinqMakeupTitre {
+    text-align: center;
+    padding-top: 10%;  
+    font-size: 50px; 
+    font-family: 'Dancing Script', cursive;  
+   color: whitesmoke ;
+   
+  
+   }
+  
+   @media only screen and (max-width: 1024px) {
+    .contenairFormule {
+        /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ImageFormule {
+      margin-bottom: 8%;
+    }
+    .contenairFormuleResponsive {
+     flex-direction: column-reverse;
+    }
+    
+  }
+  
+  /* ————————————————————————————————————-FIN PAGE MANUCURE ————————————————————————————————————————————————————————— */
+
+
+   /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+
+/* --------------------------PAGE FORFAIT: ----------------------------------------------- */
+
+
+     
+ 
+  #SectionUneForfait h1 {
+   text-align: center;
+   font-size: 50px; 
+   font-family: 'Dancing Script', cursive;  
+  color: #EDB5C2 ;
+  /* pour avoir le contour autour de mon titre  */
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #B53B7D; 
+     
+ }
+ #SectionUneForfait p {
+   text-align: center;  
+   color: white;
+   font-size: 40px;
+ 
+ }
+
+
+ 
+ #SectionUneForfait {
+     
+     font-family: 'Great Vibes', cursive;
+     font-size: 50px;
+    
+ }
+
+ .imgforfait img{
+    box-shadow: #7c7c7c 0px 0px 9px;
+    border-radius: 19px 0 19px 0;
+    transition: all 1s ease;
+  }
+  
+  
+ 
+ 
+ #SectionUneForfait h1 {
+     font-size: 50px;
+     text-align: center; 
+ }
+ 
+ #SectionUneForfait {
+     padding-top: 0.5%; 
+     font-family: 'Great Vibes', cursive;
+     font-size: 30px;
+ }
+ 
+ 
+ #SectionDeuxForfait h1 {
+     color:#B53B7D ;
+     padding-left: 1.5%;
+     font-size: 40px;
+     padding-top: 4%;
+ }
+ 
+ 
+ .contenair {
+     display: flex;
+     padding-top: 2%;
+     flex-wrap: wrap;
+     
+    
+ }
+ 
+ 
+ 
+ .texteForfait1 {
+     color: #B53B7D;
+     padding-left: 8%;
+     font-size: 25px;
+ }
+
+ 
+
+ .Prix {
+     color: white;
+ }
+ 
+ #SectionDeuxForfait {
+     padding: 10%;
+ }
+ 
+
+ 
+ @media screen and (max-width: 1024px) {
+  .contenair {
+    padding: 2%;
+    justify-content: center;
+  }
+  .texteForfait1 {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .texteForfait1 {
+    font-size: 18px;
+    padding: 20px 0;
+  }
+}
+
+ 
+ /* ––––––––––––––––––––––––––––––––––––––––––—FIN PAGE FORFAIT ——————————————————————————————————————————————————————— */
+
+
+  /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+ /* ------------------------------PAGE RESERVATION : ------------------------------------------- */
+
+
+
+
+
+
+
+.contenairblabla {
+    text-align: center;
+    border:8px solid #fff;
+      padding: 5%;  
+     
+    
+}
+
+ #Formulaire {
+    
+     padding: 10%;  
+    
+} 
+
+
+.contenairblabla h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2; 
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+-webkit-text-stroke-color: #B53B7D;
+    padding-top: 15px;
+}
+
+.dateheuretext, .NomPrenomtexte, .NumeroAdresseTexte {
+    display: flex;
+     /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+    padding-top: 3%;
+}
+.DateHeure, .NomPrenom, .NumeroAdresse {
+    display: flex;
+     /* space-around =  Les éléments sont répartis équitablement À chaque extrémité, 
+    entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
+    justify-content: space-around;
+}
+
+.button button {
+    font-family: 'Dancing Script', cursive;
+    color: #EDB5C2; 
+    /* pour avoir le contour autour de mon titre  */
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #B53B7D;
+    font-size: 35px;
+    border-radius: 10px; 
+    background-color: #fff;
+}
+
+.button {
+    padding-top: 55px;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+#PrestationSouhaitées h1  {
+  padding-top: 7%;
+}
+
+.PrestationSouhaite{
+    display: flex;
+    /* La propriété gap est une propriété  qui permet de définir les espaces (les gouttières) entre les lignes et entre les colonnes d'une grille. */
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    
+
+}
+.prod{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+#PrestationSouhaitées{
+    text-align: center;
+}
+
+#PrestationSouhaitées h1 {
+    font-size: 40px;
+}
+
+label {
+    color: whitesmoke;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .prod{
+      width: 40%;
+  }
+
+}
+
+@media  (max-width: 767px) {
+
+    .prod{
+        width: 100%;
+    }
+
+}
+/* –––––––––––––––––––––––––––––––––––––––––––FIN PAGE RÉSERVATION –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––- */
+
+
+  /* **************************************************************************************************************************** */
+/* ****************************************************************************************************************************** */
+
+
+/* ------------------ PAGE CONTACT ------------------------------------- */
+
+
+ /* ==============  Service  ============== */
+
+ .services {
+    background-color:  black;
+    padding: 100px 0;
+  }
+  
+  .ContainerService {
+    max-width: 1300px;
+    padding: 0 45px;
+    margin: auto;
+  }
+  
+   
+  .ContainerCard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+     /* space between =  Les éléments sont répartis équitablement Le bord du premier est aligné sur le début du conteneur 
+     et la fin du dernier est alignée sur la fin du conteneur */ 
+    justify-content: space-between;
+  }
+  
+  .cardContact{
+    background: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    /* user-select: none = On ne pourra pas sélectionner le texte de l'élément  */
+    user-select: none;
+    /*  Grâce à calc(), il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS */
+    width: calc(26% - 20px);
+    /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .cardContact:hover{
+    background: #EDB5C2;
+  }
+  
+  
+  .cardContact:hover {
+    transform: scale(1.05);
+  }
+  
+  .cardContact:hover  i{
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 700px) {
+    
+    .cardContact{
+        
+        margin-bottom: 20px;
+        width: 100%;
+    }
+  }
+
+  /* --------Fin service --------------- */
+
+
+  .maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    padding: 70px 0;
+   
+  }
+  

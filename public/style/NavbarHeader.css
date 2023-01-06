@@ -1,0 +1,168 @@
+ 
+ /* ------------ Navbar ------------- */
+
+ header {
+    width: 100%;
+    height: 100vh;
+
+  }
+  
+  .BarreNav-VersionOrdi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+  
+  .MenuNav {
+    list-style: none;
+    display: flex;
+  }
+  
+  .MenuNav a,
+  .CustomButton,
+  .MenuMobile a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .MenuNav li {
+    padding: 0px 20px;
+  }
+  
+  .MenuNav li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .MenuNav li a:hover {
+    color: #ED96C8;
+  }
+  
+  .CustomMenuBurger {
+    margin-left: 20px;
+    margin-top: 3%;
+    padding: 15px 25px;
+    color: white;
+    /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+    cursor: pointer;
+    font-size: 23px;
+    transition: all 0.3s ease 0s;
+}
+  
+  .CustomButton:hover {
+    background-color: #EDB5C2(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  
+  .CacheMenuBurgerOrdi {
+    display: none;
+  }
+  
+  .ContenairMenuBurgerMobile {
+    height: 100%;
+    width: 0;
+    /* fixed = L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. 
+    L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage */
+    position: fixed;
+    /* z-index = La propriété z-index définit le « z-order »  d'un élément positionné et de ses éléments enfants
+     ou de ses éléments flexibles. 
+    Lorsque des éléments se chevauchent, le z-order détermine l'ordre des différentes couches que formeront les éléments.
+     Généralement, un élément couvrira un autre élément si sa valeur de z-index est supérieure à celle du deuxième élément. */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    /* La propriété overflow-x permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) 
+    lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu.
+     hidden = Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage (padding) et aucun 
+     ascenseur horizontal n'est affiché.*/
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .ContenairMenuBurgerMobile--active {
+    width: 100%;
+  }
+  
+  .MenuMobile {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ContenairMenuBurgerMobile a {
+    padding: 15px;
+    font-size: 36px;
+    /* block : l'élément est interprété comme un bloc, */
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+  
+
+  /* La pseudo-classe :focus permet de cibler un élément lorsque celui-ci reçoit le focus 
+  (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris ). */
+  .ContenairMenuBurgerMobile a:hover,
+  .ContenairMenuBurgerMobile a:focus {
+    color: #EDB5C2;
+  }
+  .ContenairMenuBurgerMobile .close {
+    /* position absolute = L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page.
+     La positions finale de l'élément est déterminée par les valaur qu'on lui donne  */
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+     /* La propriété CSS cursor définit la forme du curseur  lorsque le pointeur est au-dessus de l'élément. */
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .ContenairMenuBurgerMobile a {
+      font-size: 20px;
+    }
+    .ContenairMenuBurgerMobile .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .MenuNav,
+    .CustomMenuBurger{
+      /* none : l'élément n'est pas affiché et sort du flux. */
+      display: none;
+    }
+    .CacheMenuBurgerOrdi {
+      /* Le mot-clé initial applique la valeur initiale d'une propriété à un élément */
+      display: initial;
+    }
+  }
+  
+  .HeaderTitre {
+    text-align: center;
+    padding-top: 10%;  
+    font-size: 70px; 
+    font-family: 'Dancing Script', cursive;  
+   color: #EDB5C2 ;
+   /* pour avoir le contour autour de mon titre  */
+   -webkit-text-stroke: 1px;
+   -webkit-text-stroke-color: #B53B7D; 
+
+   }
+
+ 
+       
+
+ 
+/* ------------------------------------------------------------------------- */
