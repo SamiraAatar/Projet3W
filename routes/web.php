@@ -16,10 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[Controller::class,"home"])->name('home');
 
-Route::get('/histoire', function () {
-    $titre="Ns.Beauty";
-    return view('histoire',["titre"=>$titre]);
-})->name('histoire');
+Route::get('/histoire', [Controller::class, "histoire"])->name('histoire');
+
+// Route::get('/histoire',)->name('histoire');
 
 Route::get('/prestations', function () {
     return view('prestations');
