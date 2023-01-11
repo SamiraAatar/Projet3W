@@ -16,9 +16,34 @@ class Controller extends BaseController
         //db permet de faire une liaison entre la base de donnée et notre application
         //table va nous permette de savoir a quel table on s'adresse
         //get nous permet de récuperer toute les informations
+        $categorie_prestation=DB::table('categories')-> paginate(4);
+            
+        return view('home',["listecategories"=>$categorie_prestation]);
+    }
+    //cette methode sert à afficher la page histoire
+    public function histoire () {
+        $titre="Ns.Beauty";
+    return view('histoire',["titre"=>$titre]);
+    }
+
+    //methode pour afficher la page prestations 
+    public function prestations (){
         $categorie_prestation=DB::table('categories')-> get();
-        dd($categorie_prestation);
-        
-        return view('home');
+        return view('prestations',["listecategories"=>$categorie_prestation]);
+    }
+
+     //methode pour afficher la page reservation 
+     public function reservation (){
+        return view('reservation');
+    }
+
+    //methode pour afficher la page contact 
+    public function contact (){
+        return view('contact');
+    }
+
+    //methode pour afficher servicedetail 
+    public function servicedetail (){
+        return view('servicedetail');
     }
 }

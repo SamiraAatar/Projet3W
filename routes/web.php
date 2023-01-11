@@ -16,23 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[Controller::class,"home"])->name('home');
 
-Route::get('/histoire', function () {
-    $titre="Ns.Beauty";
-    return view('histoire',["titre"=>$titre]);
-})->name('histoire');
 
-Route::get('/prestations', function () {
-    return view('prestations');
-})->name('prestations');
+Route::get('/histoire', [Controller::class,"histoire"])->name('histoire');
 
-Route::get('/reservation', function () {
-    return view('reservation');
-})->name('reservation');
+Route::get('/prestations', [Controller::class,"prestations"])->name('prestations');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/reservation', [Controller::class,"reservation"])->name('reservation');
 
-Route::get('/servicedetail', function () {
-    return view('servicedetail');
-})->name('servicedetail');
+Route::get('/contact', [Controller::class,"contact"])->name('contact');
+
+Route::get('/servicedetail', [Controller::class,"servicedetail"])->name('servicedetail');
