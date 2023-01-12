@@ -28,7 +28,7 @@
               
               <p>
                 {{ $unecategorie ->description }} <br>
-                <a href="{{route("servicedetail")}}">
+                <a href="{{route("servicedetail",$unecategorie->id)}}">
                   <button class="TexteCardButton"> 
                     Voir Plus
                   </button>

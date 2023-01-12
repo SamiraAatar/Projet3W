@@ -25,4 +25,4 @@ Route::get('/reservation', [Controller::class,"reservation"])->name('reservation
 
 Route::get('/contact', [Controller::class,"contact"])->name('contact');
 
-Route::get('/servicedetail', [Controller::class,"servicedetail"])->name('servicedetail');
+Route::get('/servicedetail/{categorieId}', [Controller::class,"servicedetail"])->name('servicedetail');

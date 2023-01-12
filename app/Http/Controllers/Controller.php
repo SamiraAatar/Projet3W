@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 
@@ -43,7 +44,8 @@ class Controller extends BaseController
     }
 
     //methode pour afficher servicedetail 
-    public function servicedetail (){
-        return view('servicedetail');
+    public function servicedetail (Request $request,$categorieId){
+        $categorie_prestations=DB::table('prestations')->where('categorie_id',$categorieId)->get();
+        return view('servicedetail',["listeprestations"=>$categorie_prestations]);
     }
 }

@@ -34,7 +34,7 @@
       -->
      <!-- * ( rel ) Définit un type de lien , expliquant comment le lien se rapporte à la page Web actuelle. -->
 
-     <link rel="stylesheet" href="style/style.css">
+     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -44,27 +44,27 @@
 
  <body>
      <!-- ------------------------------------------ HEADER - NAVBAR --------------------------------------- -->
-     <header data-vide-bg= "@yield('videoarriereplan')">
+     <header data-vide-bg="http://127.0.0.1:8000/Videos/SoinDuVisageHeader.mp4">
          <!-- --------------------- PARTIR NAVBAR --------------- -->
 
          <!-- Menu version Ordi -->
          <div class="BarreNav-VersionOrdi">
 
              <!-- Ici mon logo -->
-             <a class="logo" href= "index.html"><img src= "image/logo_ns.beauty-removebg-preview.png" width="200"
-                     alt="logo"></a>
+             <a class="logo" href="{{ route('home') }}"><img
+                     src=" {{ asset('image/logo_ns.beauty-removebg-preview.png') }}" width="200" alt="logo"></a>
 
              <!--  Mon menu de la parti ordi -->
 
              <nav>
                  <ul class="MenuNav">
-                     <li><a href= "{{route('home')}}">Accueil</a></li>
-                     <li><a href= "{{route('histoire')}}">Histoire</a></li>
-                     <li><a href= "{{route('prestations')}}">Prestation</a></li>
-                     <li><a href= "{{route('reservation')}}">Réservation</a></li>
-                     <li><a href="{{route('contact')}}">Contact</a></li>
+                     <li><a href="{{ route('home') }}">Accueil</a></li>
+                     <li><a href="{{ route('histoire') }}">Histoire</a></li>
+                     <li><a href="{{ route('prestations') }}">Prestation</a></li>
+                     <li><a href="{{ route('reservation') }}">Réservation</a></li>
+                     <li><a href="{{ route('contact') }}">Contact</a></li>
                      <li>
-                         <a href= "pages/index.html" class="inscription">
+                         <a href="pages/index.html" class="inscription">
                              <i class="fa-solid fa-user"></i>
                              &nbsp;Se connecter</a>
                      </li>
@@ -93,10 +93,10 @@
          <div class="ContenairMenuBurgerMobile">
              <a class="close">&times;</a>
              <div class="MenuMobile">
-                 <a href= "index.html">Accueil</a>
-                 <a href= "histoire.html">Histoire</a>
-                 <a href= "Prestations.html">Prestation</a>
-                 <a href= "Reservation.html">Réservation</a>
+                 <a href="index.html">Accueil</a>
+                 <a href="histoire.html">Histoire</a>
+                 <a href="Prestations.html">Prestation</a>
+                 <a href="Reservation.html">Réservation</a>
                  <a href="#formulaireDeContact">Contact</a>
              </div>
          </div>
@@ -107,7 +107,7 @@
      <!-- --------------------- FIN PARTIR NAVBAR Mobile --------------- -->
 
 
-    @yield("contenuprincipal")
+     @yield('contenuprincipal')
 
 
 
@@ -122,7 +122,7 @@
      <footer>
          <div>
              <a class="logoFooter">
-                 <img src= "image/logo_ns.beauty-removebg-preview.png" width="150" alt="">
+                 <img src="image/logo_ns.beauty-removebg-preview.png" width="150" alt="">
              </a>
          </div>
 
