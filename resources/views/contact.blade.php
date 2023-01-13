@@ -41,17 +41,19 @@
 
   
  <section id="formulaireDeContact">
+
   <div class="containerContact">
       <div class="contact-box">
           <div class="left"></div>
           <div class="right">
-              <form id="form">
+              <form id="contact" method="POST" action="{{ route('enregistrer.contact') }}">
+                @csrf
                   <h2>Contactez-Nous</h2>
-                  <input type="text" name="to_name" class="field" placeholder="Nom">
-                  <input type="text" name="from_name"  class="field" placeholder="Prénom">
-                  <input type="text" name="email" class="field" placeholder="Adresse Email">
+                  <input type="text" name="to_name" maxlength="16" class="field" placeholder="Nom">
+                  <input type="text" name="from_name" maxlength="30" class="field" placeholder="Prénom">
+                  <input type="email" name="email" class="field" placeholder="Adresse Email">
                   <textarea placeholder="Message" name="message" class="field"></textarea>
-                  <button type="submit" class="btncontact">Envoyer</button>
+                  <button type="submit" id="contactsubmitbtn" class="btncontact">Envoyer</button>
               </form>
             
           </div>

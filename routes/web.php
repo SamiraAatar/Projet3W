@@ -26,3 +26,10 @@ Route::get('/reservation', [Controller::class,"reservation"])->name('reservation
 Route::get('/contact', [Controller::class,"contact"])->name('contact');
 
 Route::get('/servicedetail/{categorieId}', [Controller::class,"servicedetail"])->name('servicedetail');
+// TODO: réservation de service
+Route::get('/reserver-service/{categorieId}', [Controller::class,"ReserverService"])->name('reserve.service');
+
+// TODO: enregistrement de contact visiteurs
+Route::post('/contact', [Controller::class,"enregistrerContact"])->name('enregistrer.contact');
+
+

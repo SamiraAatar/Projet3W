@@ -44,7 +44,7 @@
 
  <body>
      <!-- ------------------------------------------ HEADER - NAVBAR --------------------------------------- -->
-     <header data-vide-bg="http://127.0.0.1:8000/Videos/SoinDuVisageHeader.mp4">
+     <header data-vide-bg="@yield('videoarriereplan')">
          <!-- --------------------- PARTIR NAVBAR --------------- -->
 
          <!-- Menu version Ordi -->
@@ -157,22 +157,22 @@
 
      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-     <script src="js/jquery.vide.js"></script>
+     <script src="{{ asset("js/jquery.vide.js") }}"></script>
      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
      <script>
          AOS.init();
      </script>
      <!-- JavaScript Bundle with Popper -->
-     <script src="js/index.js"></script>
+     <script src="{{ asset("js/index.js") }}"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
      </script>
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-     <script type="text/javascript">
+     {{-- <script type="text/javascript">
          (function() {
              emailjs.init("pLeN9_zm7yI7muGwr");
          })();
-     </script>
+     </script> --}}
  </body>
 
  </html>

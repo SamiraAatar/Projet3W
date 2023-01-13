@@ -48,4 +48,15 @@ class Controller extends BaseController
         $categorie_prestations=DB::table('prestations')->where('categorie_id',$categorieId)->get();
         return view('servicedetail',["listeprestations"=>$categorie_prestations]);
     }
+
+    // TODO: Reservation de service
+    public function ReserverService(Request $request, $serviceId){
+        $service_details = DB::table('prestations')->where('id',$serviceId)->first();
+        return view('reservation',["service_details"=>$service_details]);
+    }
+
+    // TODO: enregisytrement du formulaire de contact
+    public function enregistrerContact(Request $request){
+        return response()->json(["msg"=>"Contact enregistré avec succès", "formdata"=>$request->all()], 200);
+    }
 }
