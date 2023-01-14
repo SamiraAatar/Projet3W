@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,18 @@ Route::get('/reserver-service/{categorieId}', [Controller::class,"ReserverServic
 Route::post('/enregistrer-reservation/{prestation_id}', [Controller::class,"enregisterReservationService"])->name('enregister.reservation.service');
 
 
+Route::get("/login", function(){
+    return view("admin-views.auth.login");
+});
+
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified'
+// ])->group(function () {
+//     Route::get('/admin', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
+
+Route::get('/admin', [DashboardController::class, "deshboard"])->name('dashboard');
