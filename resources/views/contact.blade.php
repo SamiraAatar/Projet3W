@@ -46,13 +46,19 @@
       <div class="contact-box">
           <div class="left"></div>
           <div class="right">
-              <form id="contact" method="POST" action="{{ route('enregistrer.contact') }}">
-                @csrf
+              <form id="contact" method="POST" action="https://formspree.io/f/mvongokp">
                   <h2>Contactez-Nous</h2>
                   <input type="text" name="to_name" maxlength="16" class="field" placeholder="Nom">
                   <input type="text" name="from_name" maxlength="30" class="field" placeholder="Prénom">
                   <input type="email" name="email" class="field" placeholder="Adresse Email">
                   <textarea placeholder="Message" name="message" class="field"></textarea>
+                  <div id="contact-form-error" class="form-msg form-error-msg" style="display: none">
+                  Une erreur est survenue lors de la soumission de votre message. Veuillez réessayer s'il vous plaît !  
+                  </div>
+                  <div id="contact-form-status" class="form-msg form-success-msg" style="display: none">
+                    Merci de nous avoir contacter, notre équipe entrera en contact avec vous pour pour toute préoccupation ! 
+                  </div>
+
                   <button type="submit" id="contactsubmitbtn" class="btncontact">Envoyer</button>
               </form>
             

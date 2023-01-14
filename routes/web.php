@@ -29,7 +29,6 @@ Route::get('/servicedetail/{categorieId}', [Controller::class,"servicedetail"])-
 // TODO: réservation de service
 Route::get('/reserver-service/{categorieId}', [Controller::class,"ReserverService"])->name('reserve.service');
 
-// TODO: enregistrement de contact visiteurs
-Route::post('/contact', [Controller::class,"enregistrerContact"])->name('enregistrer.contact');
+Route::post('/enregistrer-reservation/{prestation_id}', [Controller::class,"enregisterReservationService"])->name('enregister.reservation.service');
 
 

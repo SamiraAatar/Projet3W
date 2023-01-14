@@ -39,15 +39,58 @@ function ajaxPost(url, data, success, error, loaderParent = "", loadingtext = ""
 //form submition with jquery
 $("#contact").on("submit",function(e){
   e.preventDefault();
-  var loaderbtn = $("#contactsubmitbtn");
-  var loaderbtnText = loaderbtn.text();
+  
+  var loaderbtnText = $("#contactsubmitbtn").text();
+  $("#contact-form-error").hide();
+  $("#contact-form-status").hide();
+
   ajaxPost($(this).attr('action'), $(this).serialize(), (response)=>{
-    if(response.msg){
-      console.log(response.msg)
-      $(loaderbtn).text(loaderbtnText)
+
+    if(response.ok){
+      console.log(response)
+      $("#contact-form-status").show();
+      $("#contactsubmitbtn").html(loaderbtnText)
+      var form = document.getElementById("contact");
+      form.reset()
+
+    }else{
+      $("#contact-form-error").show();
 
     }
   }, (error)=>{
-    console.log(error.message)
-  }, loaderbtn,`<img src="https://s2.svgbox.net/loaders.svg?ic=spinner&color=ffffff" width="25" height="25">`)
+    $("#contact-form-error").show();
+    $("#contactsubmitbtn").html(loaderbtnText)
+
+  }, "#contactsubmitbtn",`<img src="https://s2.svgbox.net/loaders.svg?ic=spinner&color=ffffff" width="25" height="25">`)
+})
+
+
+
+//prestation reservation request
+$("#reservation-form").on("submit",function(e){
+  e.preventDefault();
+  
+  var loaderbtnText = $("#reservation-form button[type='submit']").text();
+
+  $("#contact-form-error").hide();
+  $("#contact-form-status").hide();
+
+  ajaxPost($(this).attr('action'), $(this).serialize(), (response)=>{
+
+    if(response.status){
+      console.log(response)
+      $("#reservation-form-status").show();
+      $("#reservation-form button[type='submit']").html(loaderbtnText)
+      var form = document.getElementById("reservation-form");
+      form.reset()
+
+    }else{
+      $("#reservation-form-error").show();
+
+    }
+  }, (error)=>{
+    $("#reservation-form-error").show();
+    $("#reservation-form button[type='submit']").html(loaderbtnText)
+
+  }, "#reservation-form button[type='submit']",`<img src="https://s2.svgbox.net/loaders.svg?ic=spinner&color=B53B7D" width="25" height="25">`)
 })

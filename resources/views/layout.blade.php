@@ -21,6 +21,8 @@
      <!--  * ( viewport  ) Définit les règles de dimension et d'échelle pour la fenêtre. -->
      <!-- * ( width=device-width, initial-scale=1.0 ) vous pouvez spécifier la largeur et l'échelle initiale de la page Web. -->
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
      <title>Ns Beauty</title>
 

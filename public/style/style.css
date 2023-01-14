@@ -400,6 +400,33 @@ en utilisant la propriété CSS content.  */
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
+/* contact form success message */
+.form-success-msg{
+  color: white;
+  background-color: #B53B7D;
+
+
+
+}
+/* contact form error message */
+.form-error-msg{
+  color: white;
+  background-color: red;
+  
+}
+.form-msg{
+  position: relative;
+  width: 100%;
+  padding: 18px 18px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
 .left{
 	background: url("../image/imgContact.jpg") no-repeat center;
 	background-size: cover;
@@ -1780,6 +1807,9 @@ SectionDeuxPrestation {
     entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué entre chaque élément */ 
     justify-content: space-around;
     padding-top: 3%;
+}
+.DateHeure{
+  margin-bottom: 30px;
 }
 .DateHeure, .NomPrenom, .NumeroAdresse {
     display: flex;

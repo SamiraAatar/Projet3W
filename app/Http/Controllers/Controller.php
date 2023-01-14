@@ -55,8 +55,20 @@ class Controller extends BaseController
         return view('reservation',["service_details"=>$service_details]);
     }
 
-    // TODO: enregisytrement du formulaire de contact
-    public function enregistrerContact(Request $request){
-        return response()->json(["msg"=>"Contact enregistré avec succès", "formdata"=>$request->all()], 200);
+    // enregistrer reservation de service
+    public function enregisterReservationService(Request $request, $prestation_id){
+
+        DB::table("reservations")->insert([
+             "prestation_id"=>$prestation_id,
+             "nom"=>$request->nom,
+              "prenoms"=>$request->prenoms,
+               "numero"=>$request->numero, 
+               "prix"=>DB::table("prestations")->where("id", $prestation_id)->first()->prix, 
+               "adresse"=>$request->adresse,
+                "date_rdv"=>$request->date_rdv,
+                 "heure_rdv"=>$request->heure_rdv,
+                  "date_reesrvation"=>now()
+        ]);
+        return response()->json(["status"=>true,"msg"=>"Reservation enregistré"], 200);
     }
 }
