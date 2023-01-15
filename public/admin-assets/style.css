@@ -488,6 +488,10 @@ body {
 #content main .table-data .order table tr td .status.pending {
 	background: var(--orange);
 }
+#content main .table-data .order table tr td .status.canceled {
+	background: var(--red);
+}
+
 
 
 #content main .table-data .todo {
@@ -595,3 +599,39 @@ body {
 .order p {
 	margin: 15px 0px;;
 }
+
+
+.reservation-actions-btn{
+	position: relative;
+	width: 100%;
+}
+
+.reservation-actions-btn .btn{
+padding: 12px 12px;
+border: none;
+background: none;
+}
+
+.reservation-actions-btn .btn:hover{
+	cursor: pointer;
+	}
+
+.reservation-actions-btn .btn.confirm{
+	background-color: #3C91E6 !important;
+	color: white;
+	}
+	.reservation-actions-btn .btn.canceled{
+		background-color: red !important;
+		color: white;
+		}
+
+		.alert-danger{
+			background-color: rgb(255, 44, 44) !important;
+			color: white;
+		}
+
+		.alert-success{
+			background-color: #3C91E6 !important;
+			color: white;
+		}
+		

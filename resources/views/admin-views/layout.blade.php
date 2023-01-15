@@ -30,15 +30,6 @@
 			</li>
 			<li>
 				<a href="#">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Prestation</span>
-				</a>
-			</li>
-			{{--  --}}
-		</ul>
-		<ul class="side-menu">
-			<li>
-				<a href="#">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">Mon compte</span>
 				</a>
@@ -56,7 +47,9 @@
 
 				
 			</li>
+			{{--  --}}
 		</ul>
+		
 	</section>
 	<!-- SIDEBAR -->
 
@@ -79,5 +72,6 @@
 	
 
 	<script src="{{ asset("admin-assets/script.js") }}"></script>
+    @stack('pushscript')
 </body>
 </html>

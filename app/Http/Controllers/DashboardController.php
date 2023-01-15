@@ -18,7 +18,27 @@ class DashboardController extends Controller
         return view('admin-views.dashboard', ["reservations_encours"=>$reservations_encours, "reservations_annuler"=>$reservations_annuler, "reservations_valide"=>$reservations_valide]);
     }
 
-    public function detailsReservation(Request $request, $id_reservation){
-        return view("admin-views.details-reservation");
+    /**details d'une reservation */
+    public function detailsReservation(Request $request, Reservation $reservation){
+        return view("admin-views.details-reservation", ["reservation"=>$reservation]);
     }
+
+     /**confirmation d'une reservation */
+     public function confirmReservation(Request $request, Reservation $reservation){
+        $reservation->status = 1;
+        $reservation->save();
+        return redirect()->route("details.reservation", $reservation->id);
+
+    }
+
+     /**annulation d'une reservation */
+     public function annulerReservation(Request $request, Reservation $reservation){
+        $reservation->status = -1;
+        $reservation->save();
+        return redirect()->route("details.reservation", $reservation->id);
+    }
+
+    
+
+
 }

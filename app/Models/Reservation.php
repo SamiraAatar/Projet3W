@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+
     /**prestation relation */
     public function prestation(){
         return $this->belongsTo(Prestation::class, "prestation_id","id");

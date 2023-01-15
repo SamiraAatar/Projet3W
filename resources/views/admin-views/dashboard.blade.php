@@ -111,7 +111,12 @@
 								<td>{{ \Carbon\Carbon::create($reservation->date_rdv." ".$reservation->heure_rdv)->isoFormat("LLLL")  }}</td>
 								<td>{{ $reservation->date_reesrvation }}</td>
 
-								<td><span class="status completed">Validé</span></td>
+								
+
+								<td>
+									<a href="{{ route('details.reservation', $reservation->id) }}">
+										<span class="status completed">Validé</span>
+									</a></td>
 							</tr>
                             @endforeach
 							
@@ -156,7 +161,17 @@
 								<td>{{ \Carbon\Carbon::create($reservation->date_rdv." ".$reservation->heure_rdv)->isoFormat("LLLL")  }}</td>
 								<td>{{ $reservation->date_reesrvation }}</td>
 
-								<td><span class="status canceled">Annulé</span></td>
+								
+								
+								<td>
+
+									<a href="{{ route('details.reservation', $reservation->id) }}">
+										<span class="status canceled">Annulé</span>
+									</a>
+
+									
+								
+								</td>
 							</tr>
                             @endforeach
 							
