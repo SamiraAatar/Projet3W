@@ -15,7 +15,21 @@ class DashboardController extends Controller
         $reservations_valide = Reservation::where("status", 1)->orderBy("date_reesrvation", "desc")->simplePaginate(20);
         $reservations_annuler = Reservation::where("status", -1)->orderBy("date_reesrvation", "desc")->simplePaginate(20);
 
-        return view('admin-views.dashboard', ["reservations_encours"=>$reservations_encours, "reservations_annuler"=>$reservations_annuler, "reservations_valide"=>$reservations_valide]);
+        $count_reservations_encours = Reservation::where("status", 0)->count();
+        $count_reservations_valide = Reservation::where("status", 1)->count();
+        $count_reservations_tous = Reservation::count();
+
+
+        return view('admin-views.dashboard', [
+            "reservations_encours"=>$reservations_encours,
+         "reservations_annuler"=>$reservations_annuler,
+          "reservations_valide"=>$reservations_valide,
+        
+
+          "count_reservations_encours"=>$count_reservations_encours,
+          "count_reservations_valide"=>$count_reservations_valide,
+           "count_reservations_tous"=>$count_reservations_tous
+        ]);
     }
 
     /**details d'une reservation */

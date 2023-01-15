@@ -18,21 +18,21 @@
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>1020</h3>
+						<h3>{{ $count_reservations_encours }}</h3>
 						<p>Reservations en cours</p>
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-group' ></i>
+					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>2834</h3>
+						<h3>{{ $count_reservations_valide }}</h3>
 						<p>Reservations validées</p>
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-dollar-circle' ></i>
+					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>2543</h3>
+						<h3>{{ $count_reservations_tous }}</h3>
 						<p>Total réservations</p>
 					</span>
 				</li>
