@@ -36,7 +36,7 @@
 
                 </p>
                 <div class="skills">
-                    <a class="btnOffre" href="FormPrisedeRDV/ IndexMassage.html">
+                    <a class="btnOffre" href="{{ route("prestations") }}">
                         Réserver
                     </a>
 

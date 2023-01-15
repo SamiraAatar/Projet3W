@@ -102,21 +102,21 @@
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
 						<h3>1020</h3>
-						<p>Prestation</p>
+						<p>Reservations en cours</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
 						<h3>2834</h3>
-						<p>Rendez-vous</p>
+						<p>Reservations validées</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-dollar-circle' ></i>
 					<span class="text">
 						<h3>2543</h3>
-						<p>Annulation</p>
+						<p>Total réservations</p>
 					</span>
 				</li>
 			</ul>
@@ -125,7 +125,7 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Prestation</h3>
+						<h3>Liste des réservation en cours</h3>
 					</div>
 					<table>
 						<thead>
@@ -141,14 +141,14 @@
 						</thead>
 						<tbody>
 
-                            @foreach ($reservations_encours as $resrvation)
+                            @foreach ($reservations_encours as $reservation)
                             <tr>
 								<td>
-									<p>{{ $resrvation->nom." ".$resrvation->prenoms }}</p>
+									<p>{{ $reservation->nom." ".$reservation->prenoms }}</p>
 								</td>
-								<td>01-10-2021</td>
-								<td>01-10-2021</td>
-								<td>01-10-2021</td>
+								<td>{{ $reservation->prestation->titre }}</td>
+								<td>{{ \Carbon\Carbon::create($reservation->date_rdv." ".$reservation->heure_rdv)->isoFormat("LLLL")  }}</td>
+								<td>{{ $reservation->date_reesrvation }}</td>
 
 								<td><span class="status completed">Completed</span></td>
 							</tr>
