@@ -46,7 +46,7 @@
       <div class="contact-box">
           <div class="left"></div>
           <div class="right">
-              <form id="contact" method="POST" action="https://formspree.io/f/mvongokp">
+              <form id="contact" method="POST" action="https://formspree.io/f/moqzvara">
                   <h2>Contactez-Nous</h2>
                   <input type="text" name="to_name" maxlength="16" class="field" placeholder="Nom">
                   <input type="text" name="from_name" maxlength="30" class="field" placeholder="Prénom">
