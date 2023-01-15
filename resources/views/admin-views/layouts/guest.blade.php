@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dicta laudantium sunt magni, architecto, expedita possimus eos, recusandae corporis distinctio corrupti alias nobis molestiae. Exercitationem sequi doloribus at error tempora?</p>
         </div>
     </body>
 </html>
