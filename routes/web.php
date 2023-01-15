@@ -41,6 +41,8 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/admin', [DashboardController::class, "deshboard"])->name('dashboard');
+    Route::get('/details-reservation/{id_reservation}', [DashboardController::class, "detailsReservation"])->name('details.reservation');
+
 
 });
 

@@ -1,96 +1,13 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Boxicons -->
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<!-- My CSS -->
-	<link rel="stylesheet" href="{{ asset('admin-assets/style.css') }}">
-
-	<title>AdminHub</title>
-</head>
-<body>
-
-
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<a href="#" class="brand">
-			<i class='bx bxs-smile'></i>
-			<span class="text">Ns Beauty</span>
-		</a>
-		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
-					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Accueil</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Prestation</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Clients</span>
-				</a>
-			</li>
-			<!-- <li>
-				<a href="#">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text"></span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-group' ></i>
-					<span class="text"></span>
-				</a>
-			</li> -->
-		</ul>
-		<ul class="side-menu">
-			<li>
-				<a href="#">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Mon compte</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Déconnexion</span>
-				</a>
-			</li>
-		</ul>
-	</section>
-	<!-- SIDEBAR -->
-
-
-
-	<!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="profile porfileUser">
-				<img src="img/people.png">
-			</a>
-		</nav>
-		<!-- NAVBAR -->
-
+@extends("admin-views.layout")
+@section("mail")
 		<!-- MAIN -->
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Samira Aatar</h1>
+					<h1>{{ Auth::user()->name }}</h1>
 					<ul class="breadcrumb">			
 						<li>
-							<a class="active" href="#">Accueil</a>
+							<a class="active" href="{{ route('dashboard') }}">Accueil</a>
 						</li>
 					</ul>
 				</div>
@@ -150,22 +67,107 @@
 								<td>{{ \Carbon\Carbon::create($reservation->date_rdv." ".$reservation->heure_rdv)->isoFormat("LLLL")  }}</td>
 								<td>{{ $reservation->date_reesrvation }}</td>
 
-								<td><span class="status completed">Completed</span></td>
+								<td><a href="{{ route('details.reservation', $reservation->id) }}"><span class="status pending">
+									En cours
+									</span></a></td>
 							</tr>
                             @endforeach
 							
 							
 						</tbody>
 					</table>
+					{{ $reservations_encours->links() }}
 				</div>
 				
 			</div>
+
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Liste des réservation validées</h3>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Client</th>
+								<th>Prestation</th>
+								<th>Date rendez-vous</th>
+
+
+								<th>Date reservation</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+
+                            @foreach ($reservations_valide as $reservation)
+                            <tr>
+								<td>
+									<p>{{ $reservation->nom." ".$reservation->prenoms }}</p>
+								</td>
+								<td>{{ $reservation->prestation->titre }}</td>
+								<td>{{ \Carbon\Carbon::create($reservation->date_rdv." ".$reservation->heure_rdv)->isoFormat("LLLL")  }}</td>
+								<td>{{ $reservation->date_reesrvation }}</td>
+
+								<td><span class="status completed">Validé</span></td>
+							</tr>
+                            @endforeach
+							
+							
+						</tbody>
+					</table>
+					{{ $reservations_valide->links() }}
+				</div>
+				
+			</div>
+
+
+
+
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Liste des réservation annulées</h3>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Client</th>
+								<th>Prestation</th>
+								<th>Date rendez-vous</th>
+
+
+								<th>Date reservation</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+
+                            @foreach ($reservations_annuler as $reservation)
+                            <tr>
+								<td>
+									<p>{{ $reservation->nom." ".$reservation->prenoms }}</p>
+								</td>
+								<td>{{ $reservation->prestation->titre }}</td>
+								<td>{{ \Carbon\Carbon::create($reservation->date_rdv." ".$reservation->heure_rdv)->isoFormat("LLLL")  }}</td>
+								<td>{{ $reservation->date_reesrvation }}</td>
+
+								<td><span class="status canceled">Annulé</span></td>
+							</tr>
+                            @endforeach
+							
+							
+						</tbody>
+					</table>
+					{{ $reservations_annuler->links() }}
+				</div>
+				
+			</div>
+
 		</main>
 		<!-- MAIN -->
-	</section>
-	<!-- CONTENT -->
-	
-
-	<script src="{{ asset("admin-assets/script.js") }}"></script>
-</body>
-</html>
+	@endsection

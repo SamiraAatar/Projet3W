@@ -33,8 +33,8 @@
 
 
 			<div class="right">
-				<h5> Créer un compte</h5>
-				<p>Vous n'avez pas encore de compte ? <a href="#">Crée un compte</a></p>
+				<h5> Noiveau compte</h5>
+				<p>Créer un nouveau compte utilisateur ou <a href="{{ route('login') }}">Connecter vous directement</a></p>
 				<form method="POST" action="{{ route('register') }}">
                     @csrf
 
