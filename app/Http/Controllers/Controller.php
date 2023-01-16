@@ -33,10 +33,7 @@ class Controller extends BaseController
         return view('prestations',["listecategories"=>$categorie_prestation]);
     }
 
-     //methode pour afficher la page reservation 
-     public function reservation (){
-        return view('reservation');
-    }
+     
 
     //methode pour afficher la page contact 
     public function contact (){
@@ -52,6 +49,9 @@ class Controller extends BaseController
     // TODO: Reservation de service
     public function ReserverService(Request $request, $serviceId){
         $service_details = DB::table('prestations')->where('id',$serviceId)->first();
+        if (!$service_details){
+            abort(404);
+        }
         return view('reservation',["service_details"=>$service_details]);
     }
 

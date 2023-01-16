@@ -22,7 +22,7 @@ Route::get('/histoire', [Controller::class,"histoire"])->name('histoire');
 
 Route::get('/prestations', [Controller::class,"prestations"])->name('prestations');
 
-Route::get('/reservation', [Controller::class,"reservation"])->name('reservation');
+
 
 Route::get('/contact', [Controller::class,"contact"])->name('contact');
 

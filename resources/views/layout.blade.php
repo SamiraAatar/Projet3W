@@ -63,7 +63,7 @@
                      <li><a href="{{ route('home') }}">Accueil</a></li>
                      <li><a href="{{ route('histoire') }}">Histoire</a></li>
                      <li><a href="{{ route('prestations') }}">Prestation</a></li>
-                     <li><a href="{{ route('reservation') }}">Réservation</a></li>
+                    
                      <li><a href="{{ route('contact') }}">Contact</a></li>
                     
                  </ul>
@@ -91,11 +91,11 @@
          <div class="ContenairMenuBurgerMobile">
              <a class="close">&times;</a>
              <div class="MenuMobile">
-                 <a href="index.html">Accueil</a>
-                 <a href="histoire.html">Histoire</a>
-                 <a href="Prestations.html">Prestation</a>
-                 <a href="Reservation.html">Réservation</a>
-                 <a href="#formulaireDeContact">Contact</a>
+                 <a href="{{ route("home") }}">Accueil</a>
+                 <a href="{{ route("histoire") }}">Histoire</a>
+                 <a href="{{ route("prestations") }}">Prestation</a>
+                 
+                 <a href="{{ route("contact") }}">Contact</a>
              </div>
          </div>
 
