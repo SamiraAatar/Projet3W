@@ -23,9 +23,7 @@
 			<div class="left">
 				<div class="overlay">
 					<h1>Ns.Beauty.</h1>
-					<p>Connecter-vous afin de pouvoir prendre rendez-vous pour la
-						prestation de votre choix.
-					</p>
+					
                    
 
 				</div>

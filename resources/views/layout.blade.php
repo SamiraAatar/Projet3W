@@ -65,11 +65,7 @@
                      <li><a href="{{ route('prestations') }}">Prestation</a></li>
                      <li><a href="{{ route('reservation') }}">Réservation</a></li>
                      <li><a href="{{ route('contact') }}">Contact</a></li>
-                     <li>
-                         <a href="pages/index.html" class="inscription">
-                             <i class="fa-solid fa-user"></i>
-                             &nbsp;Se connecter</a>
-                     </li>
+                    
                  </ul>
              </nav>
 
