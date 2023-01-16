@@ -9,4 +9,7 @@ class Prestation extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public function categorie(){
+        return $this->belongsTo(Category::class,"categorie_id");
+    }
 }

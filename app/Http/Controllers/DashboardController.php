@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prestation;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -52,7 +53,11 @@ class DashboardController extends Controller
         return redirect()->route("details.reservation", $reservation->id);
     }
 
-    
+    //affichage des prestations 
+    public function listeprestation(){
+        $prestations=Prestation::all();
+        return view("admin-views.prestations",["prestations"=>$prestations]);
+    }
 
 
 }

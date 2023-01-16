@@ -26,7 +26,7 @@
 				@endif
 				@if($reservation->status == 1)
 				<div class="alert alert-success">
-					Cette reservation a déjà été confirmées !
+					Cette reservation a déjà été confirmée !
 				</div>
 				@endif
 

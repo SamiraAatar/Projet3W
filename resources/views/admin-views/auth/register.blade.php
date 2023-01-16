@@ -33,7 +33,7 @@
 
 
 			<div class="right">
-				<h5> Noiveau compte</h5>
+				<h5> Nouveau compte</h5>
 				<p>Créer un nouveau compte utilisateur ou <a href="{{ route('login') }}">Connecter vous directement</a></p>
 				<form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -83,7 +83,7 @@
 				</div>
 
 				<br>
-				<button type="submit">Se connecter</button>
+				<button type="submit">Crée le compte</button>
 				</form>
 			</div>
 

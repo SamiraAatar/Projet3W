@@ -34,7 +34,7 @@ Route::post('/enregistrer-reservation/{prestation_id}', [Controller::class,"enre
 
 
 
-
+// route proteger : il faut etre connecter pour acceder 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -44,7 +44,7 @@ Route::middleware([
     Route::get('/details-reservation/{reservation}', [DashboardController::class, "detailsReservation"])->name('details.reservation');
     Route::get('/confirm-reservation/{reservation}', [DashboardController::class, "confirmReservation"])->name('confirm.reservation');
     Route::get('/annuler-reservation/{reservation}', [DashboardController::class, "annulerReservation"])->name('annuler.reservation');
-
+    Route::get('/listeprestation', [DashboardController::class,"listeprestation"])->name('liste.prestation'); 
 
 
 

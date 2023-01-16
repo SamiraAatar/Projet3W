@@ -56,7 +56,7 @@
                   Une erreur est survenue lors de la soumission de votre message. Veuillez réessayer s'il vous plaît !  
                   </div>
                   <div id="contact-form-status" class="form-msg form-success-msg" style="display: none">
-                    Merci de nous avoir contacter, notre équipe entrera en contact avec vous pour pour toute préoccupation ! 
+                    Merci de nous avoir contacter, notre équipe entrera en contact avec vous  ! 
                   </div>
 
                   <button type="submit" id="contactsubmitbtn" class="btncontact">Envoyer</button>

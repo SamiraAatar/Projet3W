@@ -29,9 +29,9 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="{{  route('liste.prestation') }}">
 					<i class='bx bxs-cog' ></i>
-					<span class="text">Mon compte</span>
+					<span class="text">Nos prestations</span>
 				</a>
 			</li>
 			<li>
