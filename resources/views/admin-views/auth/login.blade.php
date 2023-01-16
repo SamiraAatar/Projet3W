@@ -22,9 +22,7 @@
 			<div class="left">
 				<div class="overlay">
 					<h1>Ns.Beauty.</h1>
-					<p>Connecter-vous afin de pouvoir prendre rendez-vous pour la
-						prestation de votre choix.
-					</p>
+					
 
 				</div>
 			</div>
@@ -43,8 +41,20 @@
 
 				<div class="inputs">
 					<input type="text" placeholder="adresse mail" name="email" :value="old('email')" required autofocus>
+					<p>
+                        @error("email")
+                        <span style="color: red">{{ $message }}</span>
+                @enderror
+                    
+                    </p>
 					<br>
 					<input type="password" placeholder="Mot de passe" name="password" required autocomplete="current-password">
+					<p>
+                        @error("password")
+                        <span style="color: red">{{ $message }}</span>
+                @enderror
+                    
+                    </p>
 				</div>
 
 				<br><br>

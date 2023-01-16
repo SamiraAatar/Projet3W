@@ -45,7 +45,7 @@
 								<td>{{ $prestation ->categorie->titre  }}</td>
 								<td>{{ $prestation->prix }}&euro;</td>
 
-								<td>{{ $prestation->duree }}></td>
+								<td>{{ $prestation->duree }}</td>
 							</tr>
                             @endforeach 
 							
