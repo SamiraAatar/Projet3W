@@ -3,7 +3,7 @@
 @section('contenuprincipal')
 
 
-    <section id="SectionUneSoinVisage" data-aos="zoom-in">
+    <section id="SectionUneSoinVisage" >
 
         <h1>Nos offres : </h1>
         <p> Laissez-vous tenter pour un moment de détente inoubliable ! </p>
