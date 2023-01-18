@@ -21,6 +21,8 @@
      <!--  * ( viewport  ) Définit les règles de dimension et d'échelle pour la fenêtre. -->
      <!-- * ( width=device-width, initial-scale=1.0 ) vous pouvez spécifier la largeur et l'échelle initiale de la page Web. -->
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+
 
      <title>Ns Beauty</title>
 
@@ -34,7 +36,7 @@
       -->
      <!-- * ( rel ) Définit un type de lien , expliquant comment le lien se rapporte à la page Web actuelle. -->
 
-     <link rel="stylesheet" href="style/style.css">
+     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -44,30 +46,26 @@
 
  <body>
      <!-- ------------------------------------------ HEADER - NAVBAR --------------------------------------- -->
-     <header data-vide-bg= "@yield('videoarriereplan')">
+     <header data-vide-bg="@yield('videoarriereplan')">
          <!-- --------------------- PARTIR NAVBAR --------------- -->
 
          <!-- Menu version Ordi -->
          <div class="BarreNav-VersionOrdi">
 
              <!-- Ici mon logo -->
-             <a class="logo" href= "index.html"><img src= "image/logo_ns.beauty-removebg-preview.png" width="200"
-                     alt="logo"></a>
+             <a class="logo" href="{{ route('home') }}"><img
+                     src=" {{ asset('image/logo_ns.beauty-removebg-preview.png') }}" width="200" alt="logo"></a>
 
              <!--  Mon menu de la parti ordi -->
 
              <nav>
                  <ul class="MenuNav">
-                     <li><a href= "{{route('home')}}">Accueil</a></li>
-                     <li><a href= "{{route('histoire')}}">Histoire</a></li>
-                     <li><a href= "{{route('prestations')}}">Prestation</a></li>
-                     <li><a href= "{{route('reservation')}}">Réservation</a></li>
-                     <li><a href="{{route('contact')}}">Contact</a></li>
-                     <li>
-                         <a href= "pages/index.html" class="inscription">
-                             <i class="fa-solid fa-user"></i>
-                             &nbsp;Se connecter</a>
-                     </li>
+                     <li><a href="{{ route('home') }}">Accueil</a></li>
+                     <li><a href="{{ route('histoire') }}">Histoire</a></li>
+                     <li><a href="{{ route('prestations') }}">Prestation</a></li>
+                    
+                     <li><a href="{{ route('contact') }}">Contact</a></li>
+                    
                  </ul>
              </nav>
 
@@ -93,11 +91,11 @@
          <div class="ContenairMenuBurgerMobile">
              <a class="close">&times;</a>
              <div class="MenuMobile">
-                 <a href= "index.html">Accueil</a>
-                 <a href= "histoire.html">Histoire</a>
-                 <a href= "Prestations.html">Prestation</a>
-                 <a href= "Reservation.html">Réservation</a>
-                 <a href="#formulaireDeContact">Contact</a>
+                 <a href="{{ route("home") }}">Accueil</a>
+                 <a href="{{ route("histoire") }}">Histoire</a>
+                 <a href="{{ route("prestations") }}">Prestation</a>
+                 
+                 <a href="{{ route("contact") }}">Contact</a>
              </div>
          </div>
 
@@ -107,7 +105,7 @@
      <!-- --------------------- FIN PARTIR NAVBAR Mobile --------------- -->
 
 
-    @yield("contenuprincipal")
+     @yield('contenuprincipal')
 
 
 
@@ -122,7 +120,7 @@
      <footer>
          <div>
              <a class="logoFooter">
-                 <img src= "image/logo_ns.beauty-removebg-preview.png" width="150" alt="">
+                 <img src="image/logo_ns.beauty-removebg-preview.png" width="150" alt="">
              </a>
          </div>
 
@@ -157,22 +155,22 @@
 
      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-     <script src="js/jquery.vide.js"></script>
+     <script src="{{ asset("js/jquery.vide.js") }}"></script>
      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
      <script>
          AOS.init();
      </script>
      <!-- JavaScript Bundle with Popper -->
-     <script src="js/index.js"></script>
+     <script src="{{ asset("js/index.js") }}"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
      </script>
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-     <script type="text/javascript">
+     {{-- <script type="text/javascript">
          (function() {
              emailjs.init("pLeN9_zm7yI7muGwr");
          })();
-     </script>
+     </script> --}}
  </body>
 
  </html>

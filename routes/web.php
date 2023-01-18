@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,22 +17,36 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[Controller::class,"home"])->name('home');
 
-Route::get('/histoire', [Controller::class, "histoire"])->name('histoire');
 
-// Route::get('/histoire',)->name('histoire');
+Route::get('/histoire', [Controller::class,"histoire"])->name('histoire');
 
-Route::get('/prestations', function () {
-    return view('prestations');
-})->name('prestations');
+Route::get('/prestations', [Controller::class,"prestations"])->name('prestations');
 
-Route::get('/reservation', function () {
-    return view('reservation');
-})->name('reservation');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
 
-Route::get('/servicedetail', function () {
-    return view('servicedetail');
-})->name('servicedetail');
+Route::get('/contact', [Controller::class,"contact"])->name('contact');
+
+Route::get('/servicedetail/{categorieId}', [Controller::class,"servicedetail"])->name('servicedetail');
+// TODO: réservation de service
+Route::get('/reserver-service/{categorieId}', [Controller::class,"ReserverService"])->name('reserve.service');
+
+Route::post('/enregistrer-reservation/{prestation_id}', [Controller::class,"enregisterReservationService"])->name('enregister.reservation.service');
+
+
+
+// route proteger : il faut etre connecter pour acceder 
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/admin', [DashboardController::class, "deshboard"])->name('dashboard');
+    Route::get('/details-reservation/{reservation}', [DashboardController::class, "detailsReservation"])->name('details.reservation');
+    Route::get('/confirm-reservation/{reservation}', [DashboardController::class, "confirmReservation"])->name('confirm.reservation');
+    Route::get('/annuler-reservation/{reservation}', [DashboardController::class, "annulerReservation"])->name('annuler.reservation');
+    Route::get('/listeprestation', [DashboardController::class,"listeprestation"])->name('liste.prestation'); 
+
+
+
+});
+

@@ -36,7 +36,7 @@
 
                 </p>
                 <div class="skills">
-                    <a class="btnOffre" href="FormPrisedeRDV/ IndexMassage.html">
+                    <a class="btnOffre" href="{{ route("prestations") }}">
                         Réserver
                     </a>
 
@@ -109,21 +109,21 @@
 
         <div class="SectionQuatreIndex-container">
 
+            @foreach ( $listecategories as $unecategorie )
             <div class="card">
 
                 <div class="ContenairCard">
 
                     <div class="ImgCard">
-                        <img src="image/SoinDuVisageBulle.jpg" alt="">
+                        <img src="{{ $unecategorie ->image }}" alt="">
                     </div>
 
                     <div class="TexteCard">
                         <div>
-                            <h2>Nos Soins Du Visage : </h2>
+                            <h2>{{ $unecategorie ->titre }} </h2>
 
                             <p>
-                                Découvrez nos soins du visage et laissez-vous emporter pour un moment de détente
-                                inoubliable.
+                                {{ $unecategorie ->description }}
 
                             </p>
                         </div>
@@ -132,56 +132,12 @@
                 </div>
 
             </div>
+            @endforeach
+            
 
-            <div class="card">
+           
 
-                <div class="ContenairCard">
-
-                    <div class="ImgCard">
-                        <img src="image/prestaMassage.jpg" alt="">
-                    </div>
-
-                    <div class="TexteCard">
-                        <div>
-                            <h2>Nos Massages : </h2>
-
-                            <p>
-                                Découvrez nos massages et laissez-vous emporter pour un moment de détente inoubliable.
-
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="ContenairCard">
-
-                    <div class="ImgCard">
-                        <img src="image/Make'upForfait.jpg" alt="">
-                    </div>
-
-                    <div class="TexteCard">
-                        <div>
-                            <h2>Nos Make'up : </h2>
-
-                            <p>
-                                Découvrez nos make'up moderne <br> et sur-mesure. <br>
-                                <a href="Makeup.html">
-
-                                </a>
-                            </p>
-
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+            
 
         </div>
 

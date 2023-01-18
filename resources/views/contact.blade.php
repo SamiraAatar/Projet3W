@@ -41,17 +41,25 @@
 
   
  <section id="formulaireDeContact">
+
   <div class="containerContact">
       <div class="contact-box">
           <div class="left"></div>
           <div class="right">
-              <form id="form">
+              <form id="contact" method="POST" action="https://formspree.io/f/moqzvara">
                   <h2>Contactez-Nous</h2>
-                  <input type="text" name="to_name" class="field" placeholder="Nom">
-                  <input type="text" name="from_name"  class="field" placeholder="Prénom">
-                  <input type="text" name="email" class="field" placeholder="Adresse Email">
+                  <input type="text" name="to_name" maxlength="16" class="field" placeholder="Nom">
+                  <input type="text" name="from_name" maxlength="30" class="field" placeholder="Prénom">
+                  <input type="email" name="email" class="field" placeholder="Adresse Email">
                   <textarea placeholder="Message" name="message" class="field"></textarea>
-                  <button type="submit" class="btncontact">Envoyer</button>
+                  <div id="contact-form-error" class="form-msg form-error-msg" style="display: none">
+                  Une erreur est survenue lors de la soumission de votre message. Veuillez réessayer s'il vous plaît !  
+                  </div>
+                  <div id="contact-form-status" class="form-msg form-success-msg" style="display: none">
+                    Merci de nous avoir contacter, notre équipe entrera en contact avec vous  ! 
+                  </div>
+
+                  <button type="submit" id="contactsubmitbtn" class="btncontact">Envoyer</button>
               </form>
             
           </div>

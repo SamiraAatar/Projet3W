@@ -11,23 +11,24 @@
 
     <div class="SectionDeuxPrestation-container">
 
+        @foreach ( $listecategories as $unecategorie )
       <div class="card">
 
         <div class="ContenairCard">
 
           <div class="ImgCard">
 
-            <img src="./image/SoinDuVisageBulle.jpg" alt="">
+            <img src="{{ $unecategorie ->image }}" alt="">
 
           </div>
 
           <div class="TexteCard">
             <div>
-              <h2>Nos Soins Du Visage : </h2>
+              <h2>{{ $unecategorie ->titre }} </h2>
               
               <p>
-                Découvrez nos soins du visage et laissez-vous emporter pour un moment de détente inoubliable. <br>
-                <a href="./soinvisage.html">
+                {{ $unecategorie ->description }} <br>
+                <a href="{{route("servicedetail",$unecategorie->id)}}">
                   <button class="TexteCardButton"> 
                     Voir Plus
                   </button>
@@ -43,96 +44,13 @@
 
       </div>
 
-      <div class="card">
+      @endforeach
 
-        <div class="ContenairCard">
+      
 
-          <div class="ImgCard">
-            <img src="./image/prestaMassage.jpg" alt="">
-          </div>
+     
 
-          <div class="TexteCard">
-            <div>
-              <h2>Nos Massages : </h2>
-              
-              <p>
-                Découvrez nos massages et laissez-vous emporter pour un moment de détente inoubliable. <br>
-                <a href="{{route('servicedetail')}}">
-                  <button class="TexteCardButton">
-                    Voir Plus
-                  </button>
-                </a>
-
-                </p>
-
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="ContenairCard">
-
-          <div class="ImgCard">
-
-            <img src="./image/manuuucure.png" alt="">
-
-          </div>
-
-          <div class="TexteCard">
-            <div>
-              <h2>Nos Manucures : </h2>
-              
-              <p>
-                Découvrez nos manucures et soyez belle jusqu'au bout des ongles. <br>
-                <a href="./Manucure.html">
-                  <button class="TexteCardButton">
-                    Voir Plus
-                  </button>
-                </a>
-                </p>
-
-
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="ContenairCard">
-
-          <div class="ImgCard">
-            <img src="./image/Make'upForfait.jpg" alt="">
-          </div>
-
-          <div class="TexteCard">
-            <div>
-              <h2>Nos Make'up : </h2>
-              
-              <p>
-                Découvrez nos make'up moderne <br> et sur-mesure. <br>
-                <a href="./Makeup.html">
-                  <button class="TexteCardButton">
-                    Voir Plus
-                  </button>
-                </a>
-                </p>
-
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+      
 
       <!-- <div class="card">
 
